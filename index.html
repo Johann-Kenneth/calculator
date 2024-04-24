@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="input">
+            <input type="text" readonly id="inputbox" class="inputbox" placeholder="0">
+            </div>
+
+            <div class="buttons">
+                <button onclick="ac()" class="button-grey">AC</button>
+                <button onclick="del()" class="button-grey">DEL</button>
+                <button onclick="numbers('%')" class="button-grey">%</button>
+                <button onclick="numbers('/')" class="button-orange">/</button>
+                <br><br>
+                <button class="button-black" onclick="numbers('7')">7</button>
+                <button class="button-black" onclick="numbers('8')">8</button>
+                <button class="button-black" onclick="numbers('9')">9</button>
+                <button class="button-orange" onclick="numbers('*')">*</button>
+                 <br><br>
+                <button class="button-black" onclick="numbers('4')">4</button>
+                <button class="button-black" onclick="numbers('5')">5</button>
+                <button class="button-black" onclick="numbers('6')">6</button>
+                <button class="button-orange" onclick="numbers('-')">-</button>
+                <br><br>
+                <button class="button-black" onclick="numbers('1')">1</button>
+                <button class="button-black" onclick="numbers('2')">2</button>
+                <button class="button-black" onclick="numbers('3')">3</button>
+                <button class="button-orange" onclick="numbers('+')">+</button>
+                <br><br>
+                <button class="button-black-0" onclick="numbers('0')">0</button>
+                <button class="button-black" onclick="numbers('.')">.</button>
+                <button class="button-orange" onclick="equals()">=</button>
+                
+            </div>
+        </div>
+        <footer> Coded By Johann Kenneth </footer>
+    </div>
+    
+    <script>
+        var input = document.getElementById('inputbox')
+    function numbers(val){
+    inputbox.value += val;
+    }
+    function equals(){
+      var ans=eval(inputbox.value)
+      inputbox.value=ans
+    }
+    function ac(){
+        inputbox.value=""
+    }
+    function del(){
+        inputbox.value= inputbox.value.slice(0,-1)
+    }
+    </script>
+
+    
+</body>
+</html>
